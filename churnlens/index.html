@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ChurnLens — тұтынушыларды ұстап қалу көрсеткіштерін талдау">
+  <title>ChurnLens — Басты бет</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-monogram" aria-hidden="true">CR</div>
+        <div class="logo-text">
+          <strong>ChurnLens</strong>
+          <span>Тұтынушы талдауы</span>
+        </div>
+      </a>
+      <nav class="nav-desktop" aria-label="Негізгі навигация">
+        <ul>
+          <li><a href="index.html" data-nav="home">Басты бет</a></li>
+          <li><a href="about.html" data-nav="about">Жоба туралы</a></li>
+          <li><a href="analytics.html" data-nav="analytics">Талдау</a></li>
+          <li><a href="portfolio.html" data-nav="portfolio">Портфолио</a></li>
+          <li><a href="contact.html" data-nav="contact">Байланыс</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" type="button" aria-label="Мәзірді ашу" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Мобильді навигация">
+      <ul>
+        <li><a href="index.html" data-nav="home">Басты бет</a></li>
+        <li><a href="about.html" data-nav="about">Жоба туралы</a></li>
+        <li><a href="analytics.html" data-nav="analytics">Талдау</a></li>
+        <li><a href="portfolio.html" data-nav="portfolio">Портфолио</a></li>
+        <li><a href="contact.html" data-nav="contact">Байланыс</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-enter">
+    <section class="hero">
+      <div class="hero-mesh" aria-hidden="true"></div>
+      <div class="hero-particles" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <h1>Тұтынушыларды ұстап қалу — бизнестің негізі</h1>
+        <p class="subhead">Churn Rate талдауы арқылы бизнесіңізді жетілдіріңіз</p>
+        <div class="hero-cta">
+          <a href="analytics.html" class="btn btn-primary">Талдауды бастау →</a>
+          <a href="about.html" class="btn btn-outline">Жоба туралы</a>
+        </div>
+        <div class="stats-row">
+          <div class="stat-card fade-in">
+            <div class="stat-value" data-counter="34%">0</div>
+            <div class="stat-label">Орташа Churn Rate (бөлшек сауда)</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-value" data-counter="5x">0</div>
+            <div class="stat-label">Жаңа клиент тарту құны</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-value" data-counter="1%↓">0</div>
+            <div class="stat-label">Churn азаю = 5% пайда өсімі</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">AI арқылы жасалған иллюстрациялар</h2>
+        <div class="image-grid">
+          <article class="image-card fade-in">
+            <img src="assets/ai-image-1.jpg" alt="Тұтынушы профилі" onerror="this.src='assets/placeholder.svg'">
+            <div class="image-overlay"><span>Тұтынушы профилі</span></div>
+          </article>
+          <article class="image-card fade-in">
+            <img src="assets/ai-image-2.jpg" alt="Деректер ағыны" onerror="this.src='assets/placeholder.svg'">
+            <div class="image-overlay"><span>Деректер ағыны</span></div>
+          </article>
+          <article class="image-card fade-in">
+            <img src="assets/ai-image-3.jpg" alt="Болжамды талдау" onerror="this.src='assets/placeholder.svg'">
+            <div class="image-overlay"><span>Болжамды талдау</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <h2 class="section-title fade-in">Churn Rate дегеніміз не?</h2>
+        <div class="content-block fade-in">
+          <p>Churn Rate (тұтынушы кету коэффициенті) — белгілі уақыт аралығында қызметтен немесе өнімнен бас тартқан тұтынушылардың жалпы тұтынушы базасына қатынасы. Бұл көрсеткіш компанияның тұтынушыларды ұстап қалу тиімділігін өлшейді және тікелей кірістің тұрақтылығына әсер етеді.</p>
+          <p>B2C нарықтарында churn негізгі себептері: төмен тұтынушы қанағаттануы, бәсекелестердің тартымды ұсыныстары, қызмет сапасының нашарлауы, бағаның өсуі және тұтынушымен байланыстың жоқтығы. Әсіресе телекоммуникация, бөлшек сауда және SaaS салаларында бұл мәселе айқын байқалады.</p>
+          <p>Churn азайту стратегиялары: жекелендірілген маркетинг, лоялдық бағдарламалары, тұтынушы тәжірибесін жақсарту, болжамды аналитика (predictive analytics) арқылы кету белгілерін ерте анықтау. Деректерге негізделген шешімдер бизнес нәтижесін айтарлықтай жақсартады.</p>
+          <blockquote class="pull-quote">Жаңа клиентті тарту бар клиентті ұстап қалудан 5 есе қымбат</blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-left">
+          <p><strong>Авторлар:</strong> Еслямова Айдана, Мейрбек Бакберген</p>
+          <p><strong>Пән:</strong> АКТ</p>
+          <p><strong>Университет:</strong> Нархоз Университеті</p>
+          <p><strong>Факультет:</strong> ЦТМ факультеті</p>
+          <p><strong>Білім беру бағдарламасы:</strong> Ақпараттық-коммуникациялық технологиялар</p>
+        </div>
+        <div class="footer-right">
+          <div class="social-links" aria-label="Әлеуметтік желілер">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="GitHub">GH</a>
+            <a href="#" aria-label="Instagram">IG</a>
+          </div>
+          <p class="footer-email">📧 churnlens@narxoz.kz</p>
+          <p>© 2026</p>
+        </div>
+      </div>
+      <p class="footer-copy">ChurnLens — Тұтынушыларды ұстап қалу көрсеткіштерін талдау</p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Жоғарыға">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChurnLens — Талдау</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body data-page="analytics">
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-monogram" aria-hidden="true">CR</div>
+        <div class="logo-text"><strong>ChurnLens</strong><span>Тұтынушы талдауы</span></div>
+      </a>
+      <nav class="nav-desktop" aria-label="Негізгі навигация">
+        <ul>
+          <li><a href="index.html" data-nav="home">Басты бет</a></li>
+          <li><a href="about.html" data-nav="about">Жоба туралы</a></li>
+          <li><a href="analytics.html" data-nav="analytics">Талдау</a></li>
+          <li><a href="portfolio.html" data-nav="portfolio">Портфолио</a></li>
+          <li><a href="contact.html" data-nav="contact">Байланыс</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" type="button" aria-label="Мәзірді ашу" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav-mobile" aria-label="Мобильді навигация">
+      <ul>
+        <li><a href="index.html" data-nav="home">Басты бет</a></li>
+        <li><a href="about.html" data-nav="about">Жоба туралы</a></li>
+        <li><a href="analytics.html" data-nav="analytics">Талдау</a></li>
+        <li><a href="portfolio.html" data-nav="portfolio">Портфолио</a></li>
+        <li><a href="contact.html" data-nav="contact">Байланыс</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-enter">
+    <section class="page-hero">
+      <div class="hero-mesh" aria-hidden="true"></div>
+      <div class="container"><h1 class="fade-in">Талдау</h1></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Тұтынушы деректері кестесі</h2>
+        <div class="table-controls fade-in">
+          <input type="search" id="table-search" class="table-search" placeholder="Іздеу..." aria-label="Кестеде іздеу">
+          <button type="button" id="csv-export" class="btn btn-outline">CSV жүктеу</button>
+        </div>
+        <div class="table-wrapper fade-in">
+          <table class="data-table" id="churn-table">
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Тұтынушы сегменті</th>
+                <th>Жыл</th>
+                <th>Тұтынушылар саны</th>
+                <th>Кеткен тұтынушылар</th>
+                <th>Churn Rate (%)</th>
+                <th>Ұстап қалу (%)</th>
+                <th>Тренд</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Бөлшек сауда</td><td>2020</td><td>15 000</td><td>5 100</td><td>34%</td><td>66%</td><td class="trend-down">Төмендеу</td></tr>
+              <tr><td>2</td><td>Бөлшек сауда</td><td>2022</td><td>16 200</td><td>4 860</td><td>30%</td><td>70%</td><td class="trend-down">Төмендеу</td></tr>
+              <tr><td>3</td><td>Телекоммуникация</td><td>2021</td><td>8 500</td><td>2 975</td><td>35%</td><td>65%</td><td class="trend-stable">Тұрақты</td></tr>
+              <tr><td>4</td><td>Телекоммуникация</td><td>2024</td><td>9 100</td><td>2 548</td><td>28%</td><td>72%</td><td class="trend-down">Төмендеу</td></tr>
+              <tr><td>5</td><td>Банк</td><td>2020</td><td>12 000</td><td>1 800</td><td>15%</td><td>85%</td><td class="trend-down">Төмендеу</td></tr>
+              <tr><td>6</td><td>Банк</td><td>2023</td><td>13 500</td><td>1 755</td><td>13%</td><td>87%</td><td class="trend-down">Төмендеу</td></tr>
+              <tr><td>7</td><td>SaaS</td><td>2022</td><td>2 400</td><td>336</td><td>14%</td><td>86%</td><td class="trend-stable">Тұрақты</td></tr>
+              <tr><td>8</td><td>SaaS</td><td>2024</td><td>3 100</td><td>372</td><td>12%</td><td>88%</td><td class="trend-down">Төмендеу</td></tr>
+              <tr><td>9</td><td>Бөлшек сауда</td><td>2024</td><td>17 800</td><td>4 806</td><td>27%</td><td>73%</td><td class="trend-down">Төмендеу</td></tr>
+              <tr><td>10</td><td>Телекоммуникация</td><td>2020</td><td>7 800</td><td>2 886</td><td>37%</td><td>63%</td><td class="trend-up">Өсу</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <h2 class="section-title fade-in">AI Кеңесші — Churn Болжамы</h2>
+        <p class="section-subtitle fade-in">Деректеріңізді енгізіңіз, AI болжам жасайды</p>
+        <form id="ai-agent-form" class="glass-card fade-in">
+          <div class="ai-form">
+            <div class="form-group">
+              <label for="customers-count">Тұтынушылар саны</label>
+              <input type="number" id="customers-count" name="customers" min="1" value="5000" required>
+            </div>
+            <div class="form-group">
+              <label for="inactive-slider">Белсенді емес тұтынушылар %: <span id="inactive-value" class="slider-value">25%</span></label>
+              <input type="range" id="inactive-slider" min="0" max="100" value="25">
+            </div>
+            <div class="form-group">
+              <label for="industry-select">Сала</label>
+              <select id="industry-select" required>
+                <option value="Бөлшек сауда">Бөлшек сауда</option>
+                <option value="Телекоммуникация">Телекоммуникация</option>
+                <option value="Банк">Банк</option>
+                <option value="SaaS">SaaS</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contract-months">Орташа шарт ұзақтығы (айлар)</label>
+              <input type="number" id="contract-months" min="1" max="60" value="12" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Талдауды бастау</button>
+        </form>
+        <div id="ai-loading" class="loading-wrap" style="display:none">
+          <div class="spinner" role="status" aria-label="Жүктелуде"></div>
+          <p>AI талдау жасайды...</p>
+        </div>
+        <div id="ai-results" class="ai-results" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Деректер визуализациясы</h2>
+        <div class="charts-grid">
+          <div class="glass-card chart-card fade-in">
+            <h3>Churn Rate Динамикасы</h3>
+            <div class="chart-container"><canvas id="churn-line-chart" aria-label="Churn rate динамикасы графигі"></canvas></div>
+          </div>
+          <div class="glass-card chart-card fade-in">
+            <h3>Сала бойынша салыстыру</h3>
+            <div class="chart-container"><canvas id="churn-bar-chart" aria-label="Сала бойынша churn салыстыру"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-left">
+          <p><strong>Авторлар:</strong> Еслямова Айдана, Мейрбек Бакберген</p>
+          <p><strong>Пән:</strong> АКТ</p>
+          <p><strong>Университет:</strong> Нархоз Университеті</p>
+          <p><strong>Факультет:</strong> ЦТМ факультеті</p>
+          <p><strong>Білім беру бағдарламасы:</strong> Ақпараттық-коммуникациялық технологиялар</p>
+        </div>
+        <div class="footer-right">
+          <div class="social-links"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">GH</a><a href="#" aria-label="Instagram">IG</a></div>
+          <p class="footer-email">📧 churnlens@narxoz.kz</p>
+          <p>© 2026</p>
+        </div>
+      </div>
+      <p class="footer-copy">ChurnLens — 2026</p>
+    </div>
+  </footer>
+  <button type="button" class="back-to-top" aria-label="Жоғарыға">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/table.js"></script>
+  <script src="js/ai-agent.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>
+

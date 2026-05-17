@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChurnLens — Портфолио</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="portfolio">
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-monogram" aria-hidden="true">CR</div>
+        <div class="logo-text"><strong>ChurnLens</strong><span>Тұтынушы талдауы</span></div>
+      </a>
+      <nav class="nav-desktop" aria-label="Негізгі навигация">
+        <ul>
+          <li><a href="index.html" data-nav="home">Басты бет</a></li>
+          <li><a href="about.html" data-nav="about">Жоба туралы</a></li>
+          <li><a href="analytics.html" data-nav="analytics">Талдау</a></li>
+          <li><a href="portfolio.html" data-nav="portfolio">Портфолио</a></li>
+          <li><a href="contact.html" data-nav="contact">Байланыс</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" type="button" aria-label="Мәзірді ашу" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav-mobile" aria-label="Мобильді навигация">
+      <ul>
+        <li><a href="index.html" data-nav="home">Басты бет</a></li>
+        <li><a href="about.html" data-nav="about">Жоба туралы</a></li>
+        <li><a href="analytics.html" data-nav="analytics">Талдау</a></li>
+        <li><a href="portfolio.html" data-nav="portfolio">Портфолио</a></li>
+        <li><a href="contact.html" data-nav="contact">Байланыс</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-enter">
+    <section class="page-hero">
+      <div class="hero-mesh" aria-hidden="true"></div>
+      <div class="container"><h1 class="fade-in">Портфолио</h1></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Бейне презентация</h2>
+        <div class="video-wrapper fade-in">
+          <video id="churn-video" poster="assets/placeholder.svg" preload="metadata">
+            <source src="assets/churn-presentation.mp4" type="video/mp4">
+          </video>
+          <p class="video-fallback">Бейне жүктелуде...</p>
+          <div class="video-controls">
+            <button type="button" id="video-play" class="btn btn-primary">Ойнату</button>
+            <button type="button" id="video-pause" class="btn btn-outline">Тоқтату</button>
+            <button type="button" id="video-fullscreen" class="btn btn-outline">Толық экран</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <h2 class="section-title fade-in">AI музыкасы</h2>
+        <div class="glass-card audio-player fade-in">
+          <audio id="ai-music" src="assets/ai-background-music.mp3" preload="metadata"></audio>
+          <div class="audio-controls">
+            <button type="button" id="audio-play" class="audio-btn">▶ Ойнату</button>
+            <button type="button" id="audio-pause" class="audio-btn">⏸ Кідірту</button>
+            <div class="volume-wrap">
+              <span>🔊 Дыбыс</span>
+              <input type="range" id="volume-slider" min="0" max="100" value="70" aria-label="Дыбыс деңгейі">
+            </div>
+          </div>
+          <div class="waveform" aria-hidden="true">
+            <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+          </div>
+          <p class="audio-desc">Бұл музыка нейрожелі арқылы жасалды</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">AI Чат-боты — Сұрақ қойыңыз</h2>
+        <p class="section-subtitle fade-in">Churn Rate туралы кез-келген сұрақ қойыңыз</p>
+        <div class="quick-replies fade-in">
+          <button type="button" class="chip">Churn Rate дегеніміз не?</button>
+          <button type="button" class="chip">Қалай азайтуға болады?</button>
+          <button type="button" class="chip">Лоялдық бағдарламасы</button>
+          <button type="button" class="chip">Мысал келтір</button>
+        </div>
+        <div class="chat-container fade-in">
+          <div id="chat-messages" class="chat-messages" role="log" aria-live="polite"></div>
+          <div class="chat-input-row">
+            <input type="text" id="chat-input" placeholder="Сұрағыңызды жазыңыз..." aria-label="Чат хабарламасы">
+            <button type="button" id="chat-send" class="btn btn-primary">Жіберу</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <h2 class="section-title fade-in">Churn Rate инфографикасы</h2>
+        <div class="funnel-infographic glass-card fade-in">
+          <div class="funnel-step">
+            <div class="funnel-label"><span>Бастапқы тұтынушылар</span><span>100%</span></div>
+            <div class="funnel-bar"><div class="funnel-fill total" data-width="100%" style="width:0"></div></div>
+            <p style="margin-top:0.5rem;color:var(--muted)">100 тұтынушы</p>
+          </div>
+          <div class="funnel-step">
+            <div class="funnel-label"><span>Ұсталған</span><span>73%</span></div>
+            <div class="funnel-bar"><div class="funnel-fill retained" data-width="73%" style="width:0"></div></div>
+            <p style="margin-top:0.5rem;color:var(--accent)">73 тұтынушы ұсталды</p>
+          </div>
+          <div class="funnel-step">
+            <div class="funnel-label"><span>Кеткен (Churn)</span><span>27%</span></div>
+            <div class="funnel-bar"><div class="funnel-fill churned" data-width="27%" style="width:0"></div></div>
+            <p style="margin-top:0.5rem;color:var(--danger)">27 тұтынушы кетті</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-left">
+          <p><strong>Авторлар:</strong> Еслямова Айдана, Мейрбек Бакберген</p>
+          <p><strong>Пән:</strong> АКТ</p>
+          <p><strong>Университет:</strong> Нархоз Университеті</p>
+          <p><strong>Факультет:</strong> ЦТМ факультеті</p>
+          <p><strong>Білім беру бағдарламасы:</strong> Ақпараттық-коммуникациялық технологиялар</p>
+        </div>
+        <div class="footer-right">
+          <div class="social-links"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">GH</a><a href="#" aria-label="Instagram">IG</a></div>
+          <p class="footer-email">📧 churnlens@narxoz.kz</p>
+          <p>© 2026</p>
+        </div>
+      </div>
+      <p class="footer-copy">ChurnLens — 2026</p>
+    </div>
+  </footer>
+  <button type="button" class="back-to-top" aria-label="Жоғарыға">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
+

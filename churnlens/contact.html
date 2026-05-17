@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChurnLens — Байланыс</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact">
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-monogram" aria-hidden="true">CR</div>
+        <div class="logo-text"><strong>ChurnLens</strong><span>Тұтынушы талдауы</span></div>
+      </a>
+      <nav class="nav-desktop" aria-label="Негізгі навигация">
+        <ul>
+          <li><a href="index.html" data-nav="home">Басты бет</a></li>
+          <li><a href="about.html" data-nav="about">Жоба туралы</a></li>
+          <li><a href="analytics.html" data-nav="analytics">Талдау</a></li>
+          <li><a href="portfolio.html" data-nav="portfolio">Портфолио</a></li>
+          <li><a href="contact.html" data-nav="contact">Байланыс</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" type="button" aria-label="Мәзірді ашу" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav-mobile" aria-label="Мобильді навигация">
+      <ul>
+        <li><a href="index.html" data-nav="home">Басты бет</a></li>
+        <li><a href="about.html" data-nav="about">Жоба туралы</a></li>
+        <li><a href="analytics.html" data-nav="analytics">Талдау</a></li>
+        <li><a href="portfolio.html" data-nav="portfolio">Портфолио</a></li>
+        <li><a href="contact.html" data-nav="contact">Байланыс</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-enter">
+    <section class="page-hero">
+      <div class="hero-mesh" aria-hidden="true"></div>
+      <div class="container"><h1 class="fade-in">Бізбен байланысыңыз</h1></div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="fade-in">
+          <h2 class="section-title">Хабарлама жіберу</h2>
+          <form id="contact-form" class="contact-form glass-card">
+            <div class="form-group">
+              <label for="name">Аты-жөні</label>
+              <input type="text" id="name" name="name" required placeholder="Атыңызды енгізіңіз">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="subject">Хабарлама тақырыбы</label>
+              <input type="text" id="subject" name="subject" required placeholder="Тақырып">
+            </div>
+            <div class="form-group">
+              <label for="message">Хабарлама</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Хабарламаңызды жазыңыз..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Жіберу</button>
+          </form>
+        </div>
+        <div class="fade-in">
+          <h2 class="section-title">Байланыс ақпараты</h2>
+          <div class="info-cards">
+            <div class="info-card glass-card"><span class="icon">📧</span><div><strong>Email</strong><p>churnlens@narxoz.kz</p></div></div>
+            <div class="info-card glass-card"><span class="icon">🏫</span><div><strong>Университет</strong><p>Нархоз Университеті, Алматы</p></div></div>
+            <div class="info-card glass-card"><span class="icon">📚</span><div><strong>Факультет</strong><p>ЦТМ факультеті</p></div></div>
+          </div>
+          <div class="map-placeholder fade-in">
+            <iframe
+              title="Нархоз Университеті картасы"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.15!2d76.9456!3d43.2382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836e7d8f4e8f8d%3A0x6e8b8b8b8b8b8b8b!2z0J3QsNCw0YDRgtC-0LIg0YPQstC40LTQuNGG0L7QsiDQoNCw0YDQsNC90L7Qsg!5e0!3m2!1skk!2skz!4v1715000000000!5m2!1skk!2skz"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--surface);">
+      <div class="container">
+        <h2 class="section-title fade-in" style="text-align:center">Жиі қойылатын сұрақтар</h2>
+        <div class="faq-list fade-in">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">Churn Rate дегеніміз не?</button>
+            <div class="faq-answer"><div class="faq-answer-inner">Churn Rate — белгілі кезеңде қызметтен кеткен тұтынушылардың жалпы базаға қатынасы. Бұл көрсеткіш бизнестің тұрақтылығын бағалауға көмектеседі.</div></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">Churn Rate қалай есептеледі?</button>
+            <div class="faq-answer"><div class="faq-answer-inner">Формула: (Кеткен тұтынушылар / Бастапқы тұтынушылар) × 100%. Мысалы, 1000 тұтынушыдан 250 кетсе, churn rate 25% болады.</div></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">Қай салада churn жоғары?</button>
+            <div class="faq-answer"><div class="faq-answer-inner">Бөлшек сауда және телекоммуникацияда churn әдетте 25–35% аралығында. Банк және SaaS салаларында төменірек — 12–18%.</div></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">AI қалай көмектеседі?</button>
+            <div class="faq-answer"><div class="faq-answer-inner">AI болжамды талдау, сегменттеу және жекелендірілген ұсыныстар беру арқылы churn азайту стратегияларын ұсынады.</div></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">Деректерді қалай экспорттауға болады?</button>
+            <div class="faq-answer"><div class="faq-answer-inner">Талдау бетіндегі кестеден «CSV жүктеу» батырмасын басып, деректерді Excel немесе Google Sheets-ке импорттауға болады.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-left">
+          <p><strong>Авторлар:</strong> Еслямова Айдана, Мейрбек Бакберген</p>
+          <p><strong>Пән:</strong> АКТ</p>
+          <p><strong>Университет:</strong> Нархоз Университеті</p>
+          <p><strong>Факультет:</strong> ЦТМ факультеті</p>
+          <p><strong>Білім беру бағдарламасы:</strong> Ақпараттық-коммуникациялық технологиялар</p>
+        </div>
+        <div class="footer-right">
+          <div class="social-links"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">GH</a><a href="#" aria-label="Instagram">IG</a></div>
+          <p class="footer-email">📧 churnlens@narxoz.kz</p>
+          <p>© 2026</p>
+        </div>
+      </div>
+      <p class="footer-copy">ChurnLens — 2026</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite">Хабарламаңыз жіберілді! Рақмет!</div>
+  <button type="button" class="back-to-top" aria-label="Жоғарыға">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
